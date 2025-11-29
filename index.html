@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Human Defense - Shooting Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+        <div class="game-header">
+            <div class="score-display">
+                <span>Score: <span id="score">0</span></span>
+            </div>
+            <div class="health-display">
+                <span>Health: <span id="health">100</span></span>
+                <div class="health-bar">
+                    <div class="health-fill" id="healthBar"></div>
+                </div>
+            </div>
+            <div class="level-display">
+                <span>Level: <span id="level">1</span></span>
+            </div>
+        </div>
+        
+        <canvas id="gameCanvas"></canvas>
+        
+        <div class="game-overlay" id="startScreen">
+            <div class="overlay-content">
+                <h1>Human Defense</h1>
+                <p>Defend yourself from incoming enemies!</p>
+                <p class="instructions">
+                    <strong>Controls:</strong><br>
+                    Move: WASD or Arrow Keys<br>
+                    Shoot: Mouse Click or Spacebar<br>
+                    Aim: Mouse Movement
+                </p>
+                <button id="startButton">Start Game</button>
+            </div>
+        </div>
+        
+        <div class="game-overlay hidden" id="gameOverScreen">
+            <div class="overlay-content">
+                <h1>Game Over!</h1>
+                <p>Final Score: <span id="finalScore">0</span></p>
+                <p>Level Reached: <span id="finalLevel">1</span></p>
+                <button id="restartButton">Play Again</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
+
